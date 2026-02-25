@@ -27,8 +27,8 @@ body:
       label: Description
       description: Describe the testing gap or quality concern
       placeholder: |
-        e.g., "The `context.map()` method has no tests for the case where all items fail"
-        e.g., "Integration test `xyz` is flaky and fails ~10% of the time"
+        e.g., "The context.map() method has no tests for the case where all items fail"
+        e.g., "Integration test xyz is flaky and fails ~10% of the time"
     validations:
       required: true
 
@@ -38,7 +38,7 @@ body:
       label: Affected Files or Areas
       description: Which files, modules, or features are affected?
       placeholder: |
-        e.g., packages/aws-durable-execution-sdk-js/src/context/...
+        e.g., packages/aws-durable-execution-sdk-js/src/context/
     validations:
       required: false
 
@@ -49,15 +49,17 @@ body:
       description: Suggest how this could be addressed
       placeholder: |
         e.g., "Add test cases covering error propagation in map operations"
-        e.g., "Add retry logic to the flaky integration test"
+        e.g., "Update CI workflow to retry flaky tests automatically"
     validations:
       required: false
 
   - type: textarea
-    id: context
+    id: additional-context
     attributes:
       label: Additional Context
-      description: Add any other context, logs, or CI output
-      placeholder: Additional information...
+      description: Any other context about the problem
+      placeholder: |
+        e.g., "This affects production reliability"
+        e.g., "Related to issue #123"
     validations:
       required: false
